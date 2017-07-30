@@ -1,0 +1,36 @@
+[05-Jan-2017 15:33:32 Asia/Kolkata] PHP Warning:  require(/home/smartnarayangaon/public_html/../frontend/config/bootstrap.php): failed to open stream: No such file or directory in /home/smartnarayangaon/public_html/index.php on line 8
+[05-Jan-2017 15:33:32 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required '/home/smartnarayangaon/public_html/../frontend/config/bootstrap.php' (include_path='.:/opt/alt/php55/usr/share/pear:/opt/alt/php55/usr/share/php') in /home/smartnarayangaon/public_html/index.php on line 8
+[05-Jan-2017 15:36:48 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 7714 bytes written, possibly out of free disk space in /home/smartnarayangaon/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[05-Jan-2017 15:36:48 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 7720 bytes written, possibly out of free disk space in /home/smartnarayangaon/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[05-Jan-2017 15:36:48 Asia/Kolkata] PHP Notice:  unserialize(): Error at offset 16374 of 16384 bytes in /home/smartnarayangaon/vendor/yiisoft/yii2-debug/LogTarget.php on line 88
+[05-Jan-2017 16:21:17 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 19405 bytes written, possibly out of free disk space in /home/smartnarayangaon/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[05-Jan-2017 16:21:17 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 19404 bytes written, possibly out of free disk space in /home/smartnarayangaon/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[11-Jan-2017 18:30:36 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:30:37 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:44:31 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:44:32 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:44:51 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_w

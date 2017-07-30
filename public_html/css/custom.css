@@ -1,0 +1,47 @@
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom:0px;
+    border: 1px solid transparent;
+}
+.navbar-default .navbar-brand {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #01a185;
+    text-decoration: none;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #01a185; 
+    background-color: transparent;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #FDFDFD;
+}
+.navbar-default {
+    background-color: #FDFDFD;
+    border-color: #FDFDFD;
+}
+.menu-link {
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+}
+.footer-logo a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 35%;
+    height: 1px;
+    background: #545556;
+}
+.footer-logo a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 35%;
+    height: 1px;
+    background: #545556;
+}
+.login-page{
+    margin-top:100px;
+}

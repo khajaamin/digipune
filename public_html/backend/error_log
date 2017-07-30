@@ -1,0 +1,45 @@
+[07-Jan-2017 13:59:49 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/smartnarayangaon/backend/controllers/CategoriesController.php on line 105
+[11-Jan-2017 18:45:24 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:45:25 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:45:52 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:45:53 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:46:03 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 18:46:18 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/smartnara...', 186, Array)
+#1 /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php on line 186
+[11-Jan-2017 22:12:58 Asia/Kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): write failed: Disk quota exceeded (122)' in /home/smartnarayangaon/vendor/yiisoft/yii2/web/Session.php:186
+Stack 
