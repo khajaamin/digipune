@@ -30,7 +30,7 @@ use yii\db\Expression;
 
     <?= $form->field($model, 'logo_image')->fileInput(['maxlength' => true]) ?>
 
-    <?php //$form->field($model, 'created_by')->textInput() ?>
+    <?= $form->field($model, 'order')->textInput() ?>
 
     <?php //$form->field($model, 'updated_by')->textInput() ?>
 

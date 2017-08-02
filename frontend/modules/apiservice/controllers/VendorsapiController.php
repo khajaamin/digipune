@@ -143,6 +143,7 @@ class VendorsapiController extends ActiveController
                 $model->date=date('Y-m-d');
                 $model->shop_name=$data->shopname;
                 $model->shop_address=$data->shopaddress;
+                $model->zipcode=$data->zipcode;
                 $model->time_from=(isset($data->from))?date("g:i a", strtotime($data->from)):"";
                 $model->time_to=(isset($data->to))?date("g:i a", strtotime($data->to)):"";
                 $model->weekly_off= (isset($data->weeklyoff))?$data->weeklyoff:"";

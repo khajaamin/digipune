@@ -49,6 +49,9 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'shop_address')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'zipcode')->textInput(['maxlength' => 6]) ?>
+
+
     <?= $form->field($model, 'shop_image')->fileInput(['maxlength' => true]) ?>
 </div>
 <div class="col-md-4">
@@ -56,7 +59,7 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'time_from')->textInput() ?>
 
     <?= $form->field($model, 'time_to')->textInput() ?>
-
+    
     <?= $form->field($model, 'weekly_off')->dropdownList(['Never'=>'Never', 'Sunday' => 'Sunday', 'Monday' => 'Monday','Tuesday' => 'Tuesday','Wedensday' => 'Wedensday','Thursday' => 'Thursday','Friday' => 'Friday','Saturday' => 'Saturday']) ?>
 
     <?= $form->field($model, 'shop_owner')->textInput(['maxlength' => true]) ?>

@@ -18,6 +18,7 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  * @property integer $is_deleted
+ * @property integer $order 
  */
 class Categories extends \yii\db\ActiveRecord
 {
@@ -38,7 +39,7 @@ class Categories extends \yii\db\ActiveRecord
     {
         return [
             [['app_id','category_name'], 'required'],
-            [['app_id', 'parent_id'], 'integer'],
+            [['app_id', 'parent_id', 'created_by', 'updated_by', 'is_deleted', 'order'], 'integer'],
             [['file'],'file'],
             [['description'], 'string'],
             [['category_name'], 'string', 'max' => 255],
@@ -62,6 +63,7 @@ class Categories extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'is_deleted' => 'Is Deleted',
+             'order' => 'Order'
         ];
     }
     public function getApp()

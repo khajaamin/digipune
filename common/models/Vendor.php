@@ -32,6 +32,7 @@ use Yii;
  * @property integer $ratings
  * @property double $latitude
  * @property double $lognitude
+ * @property double $zipcode 
  */
 class Vendor extends \yii\db\ActiveRecord
 {
@@ -52,12 +53,12 @@ class Vendor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['shop_name', 'shop_address', 'shop_owner', 'description', 'mobile'], 'required'],
+            [['shop_name', 'shop_address', 'shop_owner', 'description', 'mobile','zipcode'], 'required'],
             [['app_id','mobile', 'opt_mobileno', 'status','ratings'], 'integer'],
             [['shop_image'],'required','on'=>'needimage'],
             [['file'],'file'],
             [['date', 'time_from', 'time_to','ratings','latitude','lognitude'], 'safe'],
-            [['map_location','latitude','lognitude'], 'number'],
+            [['map_location','latitude','lognitude', 'zipcode'], 'number'],
             [['webingeer_coupon'], 'string'],
             [['shop_name', 'shop_address',  'weekly_off', 'shop_owner', 'description', 'email', 'opt_email', 'website', 'collected_by'], 'string', 'max' => 255],
         ];
@@ -93,7 +94,8 @@ class Vendor extends \yii\db\ActiveRecord
             'status' => 'Status',
             'ratings'=>"Ratings",
             'latitude'=>"Latitude",
-            'lognitude'=>"Logitude"
+            'lognitude'=>"Logitude",
+            'zipcode' => 'Zipcode'
         ];
     }
 

@@ -9,6 +9,7 @@ use yii\web\Response;
 use common\models\CategoriesSearch; 
 use common\models\Categories; 
 use common\models\Sliders;
+use common\models\Vendor;
 use yii\db\Expression;
 
 /**
@@ -42,10 +43,20 @@ public function behaviors()
 
    public function actionSearchByName()
     {
-        $parent_id =Yii::$app->request->get('str'); 
+        $str =Yii::$app->request->get('str'); 
         $model = new Categories();
-        return $model->find()->where(['LIKE', 'category_name', "$parent_id"])
+        $categories = $model->find()->where(['LIKE', 'category_name', "$str"])
+        ->andWhere(['app_id'=>1])->orderBy(['order'=>SORT_ASC])->asArray()->all();	
+
+        $model = new Vendor();
+        $vendors = $model->find()->where(['LIKE', 'shop_name', "$str"])
         ->andWhere(['app_id'=>1])->asArray()->all();	
+
+
+        return [
+            'categories'=>$categories,
+            'vendors'=> $vendors
+        ]; 
      }
 
    public function actionList()
@@ -54,12 +65,12 @@ public function behaviors()
         $model = new Categories();
       	if(!empty($parent_id))
     	{ 
-	    	return $model->find()->where(['parent_id'=>$parent_id,'app_id'=>1])->asArray()->all();	
+	    	return $model->find()->where(['parent_id'=>$parent_id,'app_id'=>1])->orderBy(['order'=>SORT_ASC])->asArray()->all();	
     	}
     	else{
 	    	return $model->find()->where(['OR',
                                                ['IS', 'parent_id', (new Expression('Null'))],
-                                               ['parent_id' =>0]])->asArray()->all();	
+                                               ['parent_id' =>0]])->orderBy(['order'=>SORT_ASC])->asArray()->all();	
     	}	    
      }
 
