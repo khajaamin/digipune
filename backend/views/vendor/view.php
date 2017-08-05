@@ -97,7 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 
        ?>
           <div class="item <?php echo ($i==0)?'active':'';?>">
-              <img src="http://localhost/smartcity-yii/smartnar/public_html/images/<?= $slider['name'] ?>" alt="slider_image" >  
+              <img src="/images/<?= $slider['name'] ?>" alt="slider_image" >  
               <div class="carousel-caption">
               
                 <?= Html::a('Delete', ['images/delete', 'id' => $slider['id'],'vendorId'=>$model->id], [

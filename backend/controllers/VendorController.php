@@ -222,7 +222,7 @@ class VendorController extends Controller
             $subcategories =  Yii::$app->request->post('Vendor')['subcategory_id']; 
             $app_id = Yii::$app->request->post('Vendor')['app_id'];
             if(!empty($subcategories)){
-                print_r($subcategories); exit; 
+                
                 foreach($subcategories as $category)
                 {   
 
