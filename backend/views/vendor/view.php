@@ -58,6 +58,25 @@ $this->params['breadcrumbs'][] = $this->title;
      </div> 
 
      <div class="col-md-6">
+<?php //echo Yii::$app->getUrlManager()->getBaseUrl()?>
+
+  <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Listed In below categories</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <?php     
+                        foreach($model->categories as $category)
+                        {   ?>
+
+                            <li><?php echo $category->category->category_name." - " .$category->category_name;  ?></li>
+
+                    <?php  } ?>
+                    </ul>
+                </div>
+        </div>
+
 
 <?php
       $sliders = $model->images;
@@ -65,16 +84,30 @@ $this->params['breadcrumbs'][] = $this->title;
     {
         ?>
 <section>
+
+
+
     <div class="">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
+
       <?php
         $i=0;
        foreach($sliders as $slider){ 
                 
        ?>
           <div class="item <?php echo ($i==0)?'active':'';?>">
-              <img src="/images/<?= $slider['name'] ?>" alt="slider_image" >            
+              <img src="http://localhost/smartcity-yii/smartnar/public_html/images/<?= $slider['name'] ?>" alt="slider_image" >  
+              <div class="carousel-caption">
+              
+                <?= Html::a('Delete', ['images/delete', 'id' => $slider['id'],'vendorId'=>$model->id], [
+                        'class' => 'btn btn-danger',
+                        'data' => [
+                            'confirm' => 'Are you sure you want to delete this item?',
+                            'method' => 'post',
+                        ],
+                    ]) ?>
+              </div>              
           </div>
        <?php
     
@@ -107,10 +140,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?= Alert::widget() ?>
      <?php  echo $this->render('_image_upload', ['model' => $model]); ?>
+     
      </div>
+     <div class="row">
 
-</div>
+
+      
+    </div>
 
  
-
-</div>
+     </div>

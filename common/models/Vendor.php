@@ -119,9 +119,11 @@ class Vendor extends \yii\db\ActiveRecord
         echo "<pre>";print_r($vendor); exit; 
         return $vendor;
     }
-    public function getUser()
+    public function getCategories()
     {
-        return $this->hasMany(VendorCategories::className(), ['vendor_id' => 'id']);
+        return $this->hasMany(Categories::className(), ['id' => 'category_id'])
+                ->viaTable('vendor_categories', ['vendor_id' => 'id']);
+
     }
      public function getImages()
     {

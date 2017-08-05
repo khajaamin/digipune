@@ -42,6 +42,8 @@ class VendorController extends Controller
                     'logout' => ['post'],
                     'create' => ['post','GET'],
                     'delete' => ['POST'],
+                    'view' => ['post','GET'],
+
                 ],
             ],
         ];
@@ -86,6 +88,15 @@ class VendorController extends Controller
      */
     public function actionView($id)
     {
+        if (Yii::$app->request->post('imageId'))
+        {   
+            $imageId =Yii::$app->request->post('imageId'); 
+            if($imageId)
+            {
+                $this->findModel($imageId)->delete();
+            }
+            exit; 
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -152,7 +163,8 @@ class VendorController extends Controller
             
             $subcategories = Yii::$app->request->post('Vendor')['subcategory_id'];             
             $app_id = Yii::$app->request->post('Vendor')['app_id'];
-            
+
+                
             foreach($subcategories as $category)
             {   
 
@@ -160,7 +172,7 @@ class VendorController extends Controller
                 $vendorCategory->app_id =$app_id;
                 $vendorCategory->vendor_id = $model->id;
                 $vendorCategory->category_id = $category;                 
-                $vendorCategory->save(); 
+                $vendorCategory->save(false); 
             }
 
             $imageName = "vendor_image_".rand();
@@ -210,8 +222,10 @@ class VendorController extends Controller
             $subcategories =  Yii::$app->request->post('Vendor')['subcategory_id']; 
             $app_id = Yii::$app->request->post('Vendor')['app_id'];
             if(!empty($subcategories)){
+                print_r($subcategories); exit; 
                 foreach($subcategories as $category)
                 {   
+
                     $vendorCategory->app_id =$id;
                     $vendorCategory->vendor_id = $model->id;
                     $vendorCategory->category_id = $category;                 
@@ -270,6 +284,22 @@ class VendorController extends Controller
     protected function findModel($id)
     {
         if (($model = Vendor::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+     /**
+     * Finds the Images model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $id
+     * @return Images the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findImageModel($id)
+    {
+        if (($model = Images::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

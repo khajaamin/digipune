@@ -21,12 +21,7 @@ use yii\helpers\ArrayHelper;
     <?php echo $form->field($model, 'app_id')->dropDownList($data,
         ['prompt'=>'Select Category']);?>
     
-    <?= $form->field($model, 'date')->widget(\yii\jui\DatePicker::classname(), [
-    'dateFormat'=>'yyyy-MM-dd',
-    //'language' => 'ru',
-    'dateFormat' => 'yyyy-MM-dd',
-    'options'=>['class'=>'form-control']
-]) ?>
+  
 
     <?= $form->field($model, 'shop_name')->textInput(['maxlength' => true]) ?>
 
