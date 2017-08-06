@@ -216,17 +216,18 @@ class VendorController extends Controller
             $model->lognitude =  Yii::$app->request->post('Vendor')['lognitude']; 
             $model->latitude =  Yii::$app->request->post('Vendor')['latitude']; 
             
-            $subcat=  $vendorCategory->load(Yii::$app->request->post('Vendor')['subcategory_id']); 
-            $id = $vendorCategory->load(Yii::$app->request->post('Vendor')['app_id']);
-            
             $subcategories =  Yii::$app->request->post('Vendor')['subcategory_id']; 
             $app_id = Yii::$app->request->post('Vendor')['app_id'];
+
+            VendorCategories::deleteAll("vendor_id =".$id);
+            
+
             if(!empty($subcategories)){
                 
                 foreach($subcategories as $category)
                 {   
-
-                    $vendorCategory->app_id =$id;
+                    $vendorCategory = new VendorCategories();
+                    $vendorCategory->app_id =$app_id;
                     $vendorCategory->vendor_id = $model->id;
                     $vendorCategory->category_id = $category;                 
                     $vendorCategory->save(false); 
