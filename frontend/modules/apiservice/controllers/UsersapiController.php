@@ -144,7 +144,7 @@ class UsersapiController extends ActiveController
     {
         $rating = new Ratings();
         $data =  json_decode(utf8_encode(file_get_contents("php://input")), false); 
-        if(empty($data)){
+        if(empty($data)  && empty($data->user_id)){
 
             $response["message"]='sorry something went wrong';
             return $response;
